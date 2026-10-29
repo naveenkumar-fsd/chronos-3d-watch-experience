@@ -1,75 +1,175 @@
-# React + TypeScript + Vite
+# ⌚ CHRONOS — 3D Watch Experience
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### An Interactive Luxury Watch Showcase
 
-Currently, two official plugins are available:
+A cinematic, interactive 3D watch website designed to bring the details of luxury watchmaking to life. CHRONOS combines immersive 3D visualization, scroll-driven storytelling, and elegant black-and-gold aesthetics to create a premium digital experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+> **Project Type:** Interactive 3D Frontend Experience
+> **Status:** Completed — future enhancements planned
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Overview
 
-## Expanding the ESLint configuration
+CHRONOS is a luxury watch concept website where users can explore a detailed 3D watch through interactive rotation, scroll-triggered animations, and an exploded-view presentation.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The experience combines modern frontend technologies with 3D rendering and animation to create an engaging product showcase.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* **Interactive 3D Watch:** Explore a detailed 3D watch model directly in the browser.
+* **360° Drag-to-Rotate:** Rotate the watch using mouse or touch gestures.
+* **Scroll-Driven Animations:** Experience cinematic transitions as you navigate through the website.
+* **Exploded View:** Explore the watch's individual components through an animated presentation.
+* **Interactive Component Explorer:** Discover watch components and their descriptions.
+* **Premium Visual Design:** Minimal black-and-gold styling, elegant typography, and cinematic presentation.
+* **Responsive Layout:** Designed to adapt to desktop, tablet, and mobile screens.
+* **Registration Modal:** Open a form to enter your interest in the showcased watch.
+* **Form Validation:** Validate required fields and display a success message.
+* **3D Display Toggle:** Toggle the 3D experience using the website's available control.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠️ Tech Stack
 
+| Technology        | Purpose                                         |
+| ----------------- | ----------------------------------------------- |
+| React             | Component-based user interface                  |
+| TypeScript        | Type-safe application development               |
+| Vite              | Development server and production build         |
+| Three.js          | 3D graphics rendering                           |
+| React Three Fiber | Three.js integration with React                 |
+| React Three Drei  | Helpers for the 3D scene                        |
+| GSAP              | Animation and scroll-driven interactions        |
+| CSS               | Responsive layouts, styling, and visual effects |
+
+## 🖥️ Getting Started
+
+Follow these steps to run the project locally.
+
+### Prerequisites
+
+* Node.js and npm
+* Git
+* A code editor such as Visual Studio Code
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/chronos-3d-watch-experience.git
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Replace `YOUR_USERNAME` with your GitHub username.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 2. Navigate to the project directory
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+cd chronos-3d-watch-experience
 ```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in your terminal to explore the website.
+
+### 5. Create a production build
+
+```bash
+npm run build
+```
+
+Vite generates the production files in the `dist` directory.
+
+## 📁 Project Structure
+
+```text
+chronos-3d-watch-experience/
+├── public/
+│   ├── models/
+│   │   └── dive-watch.glb
+│   ├── favicon.svg
+│   └── icons.svg
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── sections/
+│   │   │   ├── Closing.tsx
+│   │   │   ├── RegisterModal.tsx
+│   │   │   ├── RegisterModal.css
+│   │   │   ├── Hero.tsx
+│   │   │   ├── Reveal.tsx
+│   │   │   ├── Exploded.tsx
+│   │   │   ├── Explorer.tsx
+│   │   │   └── Specimen.tsx
+│   │   ├── ModelStage.tsx
+│   │   ├── WatchModel.tsx
+│   │   ├── Annotations.tsx
+│   │   ├── Loader.tsx
+│   │   └── Nav.tsx
+│   ├── hooks/
+│   ├── lib/
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── styles.css
+├── index.html
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
+```
+
+## 🎮 How to Explore
+
+1. Open the website and experience the introductory hero section.
+2. Drag the 3D watch to explore it from different angles.
+3. Scroll through the page to experience the animated watch presentation.
+4. Explore the exploded view and discover individual components.
+5. Visit the specifications section to learn more about the concept.
+6. Open the contact section and try the registration form.
+
+## 📝 Registration Form Notice
+
+CHRONOS is a concept website. The registration form currently demonstrates frontend validation and a success state.
+
+**The form is not connected to a backend or database. Submitted details are not transmitted or stored.**
+
+## 🔮 Future Enhancements
+
+Potential improvements include:
+
+* Backend integration for registration submissions.
+* Database storage for customer enquiries.
+* Further performance optimization for 3D assets.
+* Additional watch models and interactive product experiences.
+* Enhanced accessibility and mobile interaction testing.
+
+## 🎯 Project Goals
+
+This project explores how modern frontend technologies can be used to build immersive, interactive product experiences.
+
+It demonstrates practical implementation of:
+
+* Component-based React architecture.
+* TypeScript in a frontend application.
+* Browser-based 3D rendering.
+* Interactive 3D model manipulation.
+* Scroll-triggered animation workflows.
+* Responsive CSS design.
+* Form validation and user interaction.
+* Production builds with Vite.
+
+## 👨‍💻 Author
+
+**Naveen Kumar**
+
+Frontend Development | React | TypeScript | Three.js
+
+---
+
+*CHRONOS is a conceptual luxury watch experience created for design and development exploration. It is not an official watch manufacturer or an online store.*
